@@ -1,0 +1,22 @@
+.container {
+    margin: 120px auto;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    padding-top: 48px;
+}
+
+label {
+    padding-top: 16px;
+}
+
+form {
+    margin: 48px;
+}
+
+button {
+    margin-top: 48px;
+    width: 100%;
+}
