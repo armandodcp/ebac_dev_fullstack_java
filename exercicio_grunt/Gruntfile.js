@@ -91,48 +91,13 @@ module.exports = function (grunt) {
                 }
             }
         }
-        /*,
-        sass: {
-            dist: {
-                options: {
-                    style: 'compressed'
-                },
-                files: {
-                    'main2.css': 'main.scss'
-                }
-            }
-        },
-        concurrent: {
-            target: ['olaGrunt', 'less', 'sass', 'tarefaDemorada']
-        }*/
     })
-    /*
-        grunt.registerTask('olaGrunt', function () {
-            const done = this.async();
-            setTimeout(function () {
-                console.log('Olá Grunt');
-                done();
-            }, 3000);
-    
-        })
-    
-        grunt.registerTask('tarefaDemorada', function () {
-            const done = this.async();
-            setTimeout(function () {
-                console.log('Olá Grunt');
-                done();
-            }, 3000);
-    
-        })
-    */
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-replace');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    //grunt.loadNpmTasks('grunt-contrib-sass');
-    //grunt.loadNpmTasks('grunt-concurrent');
 
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('build', ['less:production', 'htmlmin:dist', 'replace:dist', 'clean', 'uglify']);
